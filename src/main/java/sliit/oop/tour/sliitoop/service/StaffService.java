@@ -9,4 +9,6 @@ public interface StaffService extends SuperService {
     StaffDAO getUserById(String userId);
     StaffDAO saveStaff(StaffDAO staffDAO);
 
+    void deleteById(Integer id);
+
 }

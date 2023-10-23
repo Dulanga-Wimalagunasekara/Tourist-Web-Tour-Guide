@@ -37,4 +37,9 @@ public class StaffServiceImpl implements StaffService {
         return staffRepository.save(staffDAO);
     }
 
+    @Override
+    public void deleteById(Integer id) {
+        staffRepository.deleteById(id);
+    }
+
 }

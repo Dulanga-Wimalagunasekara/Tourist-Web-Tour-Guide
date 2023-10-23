@@ -56,7 +56,7 @@ public class StaffRepositoryImpl implements StaffRepository {
                         rst.getString("email"), rst.getString("role"), rst.getString("username"), rst.getString("password")));
             }
 
-            throw new DatabaseOperationFailException("No Records Found for Tour Id : ".concat(String.valueOf(pk)));
+            throw new DatabaseOperationFailException("No Records Found for Staff Id : ".concat(String.valueOf(pk)));
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -65,7 +65,11 @@ public class StaffRepositoryImpl implements StaffRepository {
 
     @Override
     public void deleteById(Integer pk) {
-
+        try {
+            connection.createStatement().execute("DELETE FROM staff WHERE staff_id=".concat(String.valueOf(pk)));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override

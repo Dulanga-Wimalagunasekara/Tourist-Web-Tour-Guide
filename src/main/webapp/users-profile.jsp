@@ -118,7 +118,26 @@
               <h2><%=staffMember.getFirstName().concat(" ").concat(staffMember.getLastName())%></h2>
               <h3><%=staffMember.getRole()%></h3>
               <div class="social-links mt-2">
-                <button class="DeleteButton">
+                <button class="DeleteButton" onclick="function sendDeleteRequest(s) {
+                        var xhr = new XMLHttpRequest();
+                        var memberId = '<%=staffMember.getStaffId()%>';
+                        var url = 'staff-servlet?memberId=' + memberId;
+
+                        xhr.open('DELETE', url, true);
+                        xhr.onreadystatechange = function() {
+                          if (xhr.readyState === 4) {
+                            if (xhr.status === 200) {
+                              console.log('PUT request success!');
+                            } else {
+                              console.log('PUT request failed with status: ' + xhr.status);
+                            }
+                          }
+                        };
+
+                          xhr.send();
+                          window.location.replace('/users-profile.jsp');
+                        }
+                        sendDeleteRequest('<%=staffMember.getStaffId()%>')">
                   <span>Delete</span>
                 </button>
               </div>
