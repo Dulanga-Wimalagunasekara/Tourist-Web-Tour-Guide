@@ -16,7 +16,7 @@ public class TourServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
+        request.getSession().setAttribute("", "");
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("<html><body>");

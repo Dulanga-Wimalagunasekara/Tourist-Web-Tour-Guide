@@ -1,14 +1,3 @@
-create table tourist
-(
-    tourist_id int auto_increment
-        primary key,
-    first_name varchar(50)  not null,
-    last_name  varchar(50)  not null,
-    address    varchar(200) not null,
-    dob        date         not null,
-    email      varchar(100) not null
-);
-
 create table payment
 (
     payment_id   int auto_increment
@@ -18,14 +7,16 @@ create table payment
 
 create table staff
 (
-    staff_id   int          not null
+    staff_id   int auto_increment
         primary key,
     first_name varchar(50)  not null,
     last_name  varchar(50)  null,
     dob        date         not null,
     address    varchar(200) not null,
     email      varchar(100) not null,
-    role       varchar(20)  not null
+    role       varchar(20)  not null,
+    username   varchar(100) not null,
+    password   varchar(100) not null
 );
 
 create table tour
@@ -58,7 +49,22 @@ create table tour_guide
     last_name    varchar(50)  not null,
     address      varchar(200) not null,
     dob          date         not null,
-    email        varchar(100) not null
+    email        varchar(100) not null,
+    username     varchar(100) not null,
+    password     varchar(100) not null
+);
+
+create table tourist
+(
+    tourist_id int auto_increment
+        primary key,
+    first_name varchar(50)  not null,
+    last_name  varchar(50)  not null,
+    address    varchar(200) not null,
+    dob        date         not null,
+    email      varchar(100) not null,
+    username   varchar(100) not null,
+    password   varchar(100) not null
 );
 
 create table book_tour

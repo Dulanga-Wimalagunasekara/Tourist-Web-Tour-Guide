@@ -89,9 +89,9 @@
 <%--                            <a href="404.html" class="dropdown-item">404 Page</a>--%>
 <%--                        </div>--%>
 <%--                    </div>--%>
-                    <a href="#" class="nav-item nav-link">Contact</a>
+                    <a href="users-profile.jsp" class="nav-item nav-link" target="_blank">Manage Users</a>
                 </div>
-                <a href="host-user-signup.jsp" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                <a href="/host-user-signup.jsp" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
             </div>
         </nav>
 
@@ -669,10 +669,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        &copy; <a class="border-bottom" href="#">Tourist</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">

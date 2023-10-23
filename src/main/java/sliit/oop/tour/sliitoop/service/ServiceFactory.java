@@ -1,11 +1,12 @@
 package sliit.oop.tour.sliitoop.service;
 
+import sliit.oop.tour.sliitoop.service.Impl.StaffServiceImpl;
 import sliit.oop.tour.sliitoop.service.Impl.TourServiceImpl;
 
 /**
 * @author Dulanga Wimalagunasekara
- * Singleton service factroy to create instances of the service classes
- * by implement Factory design pattern
+ * Singleton, generic service factroy to create instances of the service classes
+ * by implementing Factory design pattern
  *
 * */
 public class ServiceFactory {
@@ -21,13 +22,15 @@ public class ServiceFactory {
         switch (serviceType){
             case TOUR:
                 return (T) new TourServiceImpl();
+            case STAFF:
+                return (T) new StaffServiceImpl();
             default:
                 return null;
         }
     }
 
     public enum ServiceTypes{
-        TOUR
+        TOUR, STAFF
     }
 }
 

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>sliit.oop.tour</groupId>
-    <artifactId>sliit-oop</artifactId>
+    <artifactId>Tourist</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>sliit-oop</name>
     <packaging>war</packaging>

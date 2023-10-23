@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .btn-edit, .btn-delete {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <h1 class="text-center mb-4">User Management</h1>
+    <table class="table table-bordered">
+        <thead class="thead-light">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Replace the following rows with data from your database -->
+        <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>johndoe@example.com</td>
+            <td>
+                <button class="btn btn-primary btn-edit">Edit</button>
+                <button class="btn btn-danger btn-delete">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td>janesmith@example.com</td>
+            <td>
+                <button class="btn btn-primary btn-edit">Edit</button>
+                <button class="btn btn-danger btn-delete">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- Add a button to create a new user -->
+    <div class="text-center">
+        <button id="btn-create" class="btn btn-success">Create New User</button>
+    </div>
+</div>
+
+<!-- JavaScript for handling user interactions -->
+<script>
+    // Replace this with actual JavaScript code to handle edit and delete actions
+    $(document).ready(function () {
+        $('.btn-edit').click(function () {
+            // Handle edit action here (e.g., open a form for editing)
+        });
+
+        $('.btn-delete').click(function () {
+            // Handle delete action here (e.g., show a confirmation dialog)
+        });
+
+        // Handle the "Create New User" button click event
+        $('#btn-create').click(function () {
+            // Implement the logic to create a new user here (e.g., show a registration form)
+        });
+    });
+</script>
+</body>
+</html>

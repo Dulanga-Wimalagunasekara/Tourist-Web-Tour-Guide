@@ -1,51 +1,91 @@
 package sliit.oop.tour.sliitoop.dao;
 
 public class TourDAO implements SuperDAO {
-    private String name;
-    private String district;
-    private String booking;
 
-    public TourDAO(String name) {
-        this.name = name;
+    private int id;
+    private String location;
+    private int price;
+    private int noOfDays;
+    private String description;
+    private int noOfPax;
+
+    public TourDAO(int id, String location, int price, int noOfDays, String description, int noOfPax) {
+        this.id = id;
+        this.location = location;
+        this.price = price;
+        this.noOfDays = noOfDays;
+        this.description = description;
+        this.noOfPax = noOfPax;
     }
 
-    public TourDAO(String name, String district, String booking) {
-        this.name = name;
-        this.district = district;
-        this.booking = booking;
+    public TourDAO(String location, int price, int noOfDays, String description, int noOfPax) {
+        this.location = location;
+        this.price = price;
+        this.noOfDays = noOfDays;
+        this.description = description;
+        this.noOfPax = noOfPax;
     }
 
-    public String getName() {
-        return name;
+    public int getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getDistrict() {
-        return district;
+    public TourDAO() {
     }
 
-    public void setDistrict(String district) {
-        this.district = district;
+    public String getLocation() {
+        return location;
     }
 
-    public String getBooking() {
-        return booking;
+    public int getPrice() {
+        return price;
     }
 
-    public void setBooking(String booking) {
-        this.booking = booking;
+    public int getNoOfDays() {
+        return noOfDays;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getNoOfPax() {
+        return noOfPax;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setNoOfDays(int noOfDays) {
+        this.noOfDays = noOfDays;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setNoOfPax(int noOfPax) {
+        this.noOfPax = noOfPax;
     }
 
     @Override
     public String toString() {
-        return "TourDTO{" +
-                "name='" + name + '\'' +
-                ", district='" + district + '\'' +
-                ", booking='" + booking + '\'' +
+        return "TourDAO{" +
+                "id=" + id +
+                ", location='" + location + '\'' +
+                ", price=" + price +
+                ", noOfDays=" + noOfDays +
+                ", description='" + description + '\'' +
+                ", noOfPax=" + noOfPax +
                 '}';
     }
-
 }
